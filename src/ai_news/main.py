@@ -3,7 +3,7 @@ import sys
 import warnings
 
 from datetime import datetime
-from crew import AiNews
+from ai_news.crew import AiNews
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -17,7 +17,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'outback',
+        'topic': 'openai',
         'date': datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     }
 
