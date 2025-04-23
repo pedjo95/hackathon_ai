@@ -16,7 +16,7 @@ class AiNews():
     def retrieve_news(self) -> Agent:
         return Agent(
             config=self.agents_config['retrieve_news'],
-	    tools=[SerperDevTool()],
+	        tools=[SerperDevTool()],
             verbose=True
         )
 
@@ -24,7 +24,7 @@ class AiNews():
     def website_scraper(self) -> Agent:
         return Agent(
             config=self.agents_config['website_scraper'],
-	    tools=[ScrapeWebsiteTool()],
+	        tools=[ScrapeWebsiteTool()],
             verbose=True
         )
     
@@ -32,7 +32,7 @@ class AiNews():
     def ai_news_writer(self) -> Agent:
         return Agent(
             config=self.agents_config['ai_news_writer'],
-	    tools=[],
+	        tools=[],
             verbose=True
         )
     
@@ -40,7 +40,7 @@ class AiNews():
     def file_writer(self) -> Agent:
         return Agent(
             config=self.agents_config['file_writer'],
-	    tools=[FileWriterTool()],
+	        tools=[FileWriterTool()],
             verbose=True
         )
 

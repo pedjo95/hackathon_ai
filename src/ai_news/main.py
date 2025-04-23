@@ -3,7 +3,7 @@ import sys
 import warnings
 
 from datetime import datetime
-from ai_news.crew import AiNews
+from crew import AiNews
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
