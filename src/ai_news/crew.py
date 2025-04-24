@@ -20,13 +20,13 @@ class AiNews():
             verbose=True
         )
 
-    # @agent
-    # def website_scraper(self) -> Agent:
-    #     return Agent(
-    #         config=self.agents_config['website_scraper'],
-	#         tools=[ScrapeWebsiteTool()],
-    #         verbose=True
-    #     )
+    @agent
+    def review_curator(self) -> Agent:
+        return Agent(
+            config=self.agents_config['review_curator'],
+	        tools=[],
+            verbose=True
+        )
     
     @agent
     def ai_news_writer(self) -> Agent:
@@ -50,11 +50,11 @@ class AiNews():
             config=self.tasks_config['retrieve_news_task'],
         )
 
-    # @task
-    # def website_scrape_task(self) -> Task:
-    #     return Task(
-    #         config=self.tasks_config['website_scrape_task'],
-    #     )
+    @task
+    def review_curator_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['review_curator_task'],
+        )
 
     @task
     def ai_news_write_task(self) -> Task:

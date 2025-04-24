@@ -9,12 +9,17 @@ retrieve_news_task:
         - Overall sentiment (positive, mixed, or negative)
   agent: retrieve_news
 
-# website_scrape_task:
-#   description: >
-#     Scrape the website for the latest news and information
-#   expected_output: >
-#     Fully scraped websites with all the important information from the website.
-#   agent: website_scraper
+review_curator_task:
+  description: >
+    From the reviews found and analyzed, pick the top 5 most informative ones.
+    Include the original quote, source link, and what makes the review useful.
+    Ensure variety (not all 5-star or all complaints).
+  expected_output: >
+    A list of 5 selected reviews, each with:
+        - Short quote or paraphrase
+        - Source link
+        - One-line reason why it was selected
+  agent: review_curator
 
 ai_news_write_task:
   description: >
