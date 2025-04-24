@@ -1,18 +1,20 @@
 retrieve_news_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is 2024.
+    Search for user reviews about the {topic} using Google.
+    Focus on recent comments, pros and cons, and general sentiment.
   expected_output: >
-    The list of 10 websites with the most relevant information about {topic}
+    A summary with:
+        - Top 5 review pages with links
+        - Pros and cons mentioned
+        - Overall sentiment (positive, mixed, or negative)
   agent: retrieve_news
 
-website_scrape_task:
-  description: >
-    Scrape the website for the latest news and information
-  expected_output: >
-    Fully scraped websites with all the important information from the website.
-  agent: website_scraper
+# website_scrape_task:
+#   description: >
+#     Scrape the website for the latest news and information
+#   expected_output: >
+#     Fully scraped websites with all the important information from the website.
+#   agent: website_scraper
 
 ai_news_write_task:
   description: >
