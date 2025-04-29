@@ -17,7 +17,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'burguer king',
+        'topic': 'giraffas',
         'date': datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     }
 

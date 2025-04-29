@@ -1,6 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-from crewai_tools import SerperDevTool, ScrapeWebsiteTool, FileWriterTool
+from crewai_tools import SerperDevTool, FileWriterTool
 from dotenv import load_dotenv
 
 load_dotenv()
