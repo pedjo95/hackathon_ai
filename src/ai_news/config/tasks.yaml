@@ -27,9 +27,21 @@ ai_news_write_task:
     Formatted as markdown without '```'
   agent: ai_news_writer
 
+insight_generator_task:
+  description: >
+      Analyze the list of curated customer reviews and extract key themes, patterns, and concerns.
+      Group feedback into categories such as strengths and areas for improvement.
+      From that analysis, write specific, actionable suggestions that the business can follow to improve customer experience.
+  expected_output: >
+      A markdown-formatted report containing:
+        - A short summary of common praise and complaints
+        - A bulleted list of actionable suggestions for improvement
+        - Optional: highlight any standout or surprising feedback
+  agent: insight_generator
+
 file_write_task:
   description: >
-    Write the news article to a file
+    Write the feedback article to a file
   expected_output: >
-    A fully fledge news article with all information from previous task into a file named news/{date}_news_article.md
+    A fully fledge feedback article with all information from previous 2 tasks into a file named results/{date}_feedback_article.md
   agent: file_writer

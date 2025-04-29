@@ -1,0 +1,1 @@
+The sentiment toward giraffas is mixed..." [truncate for size] "...on their strengths such as their menu items and ambiance.

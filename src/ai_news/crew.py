@@ -35,6 +35,14 @@ class AiNews():
 	        tools=[],
             verbose=True
         )
+        
+    @agent
+    def insight_generator(self) -> Agent:
+        return Agent(
+            config=self.agents_config['insight_generator'],
+	        tools=[],
+            verbose=True
+        )
     
     @agent
     def file_writer(self) -> Agent:
@@ -43,6 +51,7 @@ class AiNews():
 	        tools=[FileWriterTool()],
             verbose=True
         )
+    
 
     @task
     def retrieve_news_task(self) -> Task:
@@ -61,12 +70,20 @@ class AiNews():
         return Task(
             config=self.tasks_config['ai_news_write_task'],
         )
+    
+    @task
+    def insight_generator_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['insight_generator_task'],
+        )
 
     @task
     def file_write_task(self) -> Task:
         return Task(
             config=self.tasks_config['file_write_task'],
         )
+    
+
 
     @crew
     def crew(self) -> Crew:
