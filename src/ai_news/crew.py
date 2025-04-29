@@ -21,10 +21,10 @@ class AiNews():
         )
 
     @agent
-    def website_scraper(self) -> Agent:
+    def review_curator(self) -> Agent:
         return Agent(
-            config=self.agents_config['website_scraper'],
-	        tools=[ScrapeWebsiteTool()],
+            config=self.agents_config['review_curator'],
+	        tools=[],
             verbose=True
         )
     
@@ -51,9 +51,9 @@ class AiNews():
         )
 
     @task
-    def website_scrape_task(self) -> Task:
+    def review_curator_task(self) -> Task:
         return Task(
-            config=self.tasks_config['website_scrape_task'],
+            config=self.tasks_config['review_curator_task'],
         )
 
     @task
