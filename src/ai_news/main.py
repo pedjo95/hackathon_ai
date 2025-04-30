@@ -22,4 +22,5 @@ def run():
 
     AiNews().crew().kickoff(inputs=inputs)
 
-run()
+if __name__ == '__main__':
+    run()
