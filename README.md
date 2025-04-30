@@ -1,4 +1,4 @@
-# AiNews Crew
+# AiBrandChecker Crew
 
 Welcome to the AiNews Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
@@ -30,10 +30,11 @@ Next, navigate to your project directory and install the dependencies:
 crewai create crew <your_project_name>
 ```
 ### Customizing
+#### Required
+- Add your `OPENAI_API_KEY` into the `.env` file**<br>
+- Add your `SERPER_API_KEY` into the `.env` file**
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
-**Add your `SERPER_API_KEY` into the `.env` file**
-
+#### Optional
 - Modify `src/ai_news/config/agents.yaml` to define your agents
 - Modify `src/ai_news/config/tasks.yaml` to define your tasks
 - Modify `src/ai_news/crew.py` to add your own logic, tools and specific args
