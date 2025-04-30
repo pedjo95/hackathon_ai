@@ -6,21 +6,33 @@ Welcome to the AiNews Crew project, powered by [crewAI](https://crewai.com). Thi
 
 Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
-First, if you haven't already, install uv:
+First, if you haven't already, install uv on MAC/Linux:
 
 ```bash
-pip install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+After, use uv to install crewai :
+
+```bash
+uv tool install crewai
+```
+Check if the installation of crewai is complete:
+
+```bash
+uv tool list
 ```
 
 Next, navigate to your project directory and install the dependencies:
 
 (Optional) Lock the dependencies and install them by using the CLI command:
 ```bash
-crewai install
+crewai create crew <your_project_name>
 ```
 ### Customizing
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
+**Add your `SERPER_API_KEY` into the `.env` file**
 
 - Modify `src/ai_news/config/agents.yaml` to define your agents
 - Modify `src/ai_news/config/tasks.yaml` to define your tasks
