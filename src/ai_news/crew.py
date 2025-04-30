@@ -14,7 +14,7 @@ class AiNews():
     tasks_config = 'config/tasks.yaml'
 
     llm = LLM(
-        base_url='http://192.168.0.157:11434',
+        base_url='http://localhost:11434',
         model='ollama/llama3.2'
     )
 

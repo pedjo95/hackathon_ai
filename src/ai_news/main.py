@@ -17,7 +17,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'giraffas'
+        'topic': 'fiveguys'
     }
 
     AiNews().crew().kickoff(inputs=inputs)
