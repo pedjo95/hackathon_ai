@@ -17,12 +17,10 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'giraffas',
-        'date': datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+        'topic': 'fiveguys'
     }
 
     AiNews().crew().kickoff(inputs=inputs)
 
-run()
-    
-
+if __name__ == '__main__':
+    run()
