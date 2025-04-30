@@ -35,8 +35,14 @@ crewai create crew <your_project_name>
 ```
 ### Customizing
 #### Required
-- Add your `OPENAI_API_KEY` into the `.env` file**<br>
-- Add your `SERPER_API_KEY` into the `.env` file**
+- Add your `OPENAI_API_KEY` into the `.env` file<br>
+- Add your `SERPER_API_KEY` into the `.env` file
+
+You will need ollama running locally, so go to [Ollama.com](https://ollama.com/download) and download it 
+
+- Add the model you have available on ollama `model='ollama/YOUR_MODEL` on  `crew.py `<br>
+
+
 
 #### Optional
 - Modify `src/ai_news/config/agents.yaml` to define your agents
